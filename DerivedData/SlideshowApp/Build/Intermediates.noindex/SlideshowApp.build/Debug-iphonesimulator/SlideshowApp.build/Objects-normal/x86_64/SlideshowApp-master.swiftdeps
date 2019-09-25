@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.1 (swiftlang-1100.0.270.13 clang-1100.0.33.7)"
+options: "7b822a7e2970b7a481cb68033fd826f2"
+build_time: [1569410323, 670156000]
+inputs:
+  "/Users/mafu/work/develop/iOS/SlideshowApp/SlideshowApp/ViewController.swift": [1569410301, 540368101]
+  "/Users/mafu/work/develop/iOS/SlideshowApp/SlideshowApp/AppDelegate.swift": [1569331480, 397819803]
+  "/Users/mafu/work/develop/iOS/SlideshowApp/SlideshowApp/SceneDelegate.swift": [1569225822, 107473884]
+  "/Users/mafu/work/develop/iOS/SlideshowApp/SlideshowApp/ImageController.swift": [1569409542, 174833133]
