@@ -15,9 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xkT-tk-I3x">
-                                <rect key="frame" x="20" y="104" width="374" height="450"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xkT-tk-I3x">
+                                <rect key="frame" x="20" y="64" width="374" height="682"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1f9-Cq-Tbb" appends="YES" id="2uh-CE-QDq"/>
@@ -50,12 +49,16 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6l9-le-nUI" firstAttribute="top" secondItem="xkT-tk-I3x" secondAttribute="bottom" constant="20" id="2ZZ-Zk-mia"/>
                             <constraint firstItem="ysE-7p-whK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="47q-Ag-w7E"/>
                             <constraint firstItem="RQG-Sk-c1c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Xl-mw-JJp"/>
+                            <constraint firstItem="xkT-tk-I3x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="IzM-wt-kEf"/>
                             <constraint firstItem="6l9-le-nUI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="Urf-NQ-dWK"/>
                             <constraint firstItem="RQG-Sk-c1c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="XKY-t7-Z1h"/>
                             <constraint firstItem="ysE-7p-whK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="XOJ-mb-oT4"/>
+                            <constraint firstItem="xkT-tk-I3x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hFE-wr-BNk"/>
                             <constraint firstItem="6l9-le-nUI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.75" id="mg4-jp-Gs2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xkT-tk-I3x" secondAttribute="trailing" constant="20" id="uap-nc-9BA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -92,15 +95,18 @@
                                     <segue destination="byP-gY-2Pp" kind="unwind" unwindAction="unwind:" id="UrZ-lo-7bk"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2M1-JP-IR8">
-                                <rect key="frame" x="20" y="64" width="374" height="437"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2M1-JP-IR8">
+                                <rect key="frame" x="20" y="20" width="374" height="679"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="vaz-RS-KQk" firstAttribute="centerX" secondItem="Qul-dJ-zHH" secondAttribute="centerX" id="BeL-v2-JKe"/>
                             <constraint firstItem="vaz-RS-KQk" firstAttribute="centerY" secondItem="Qul-dJ-zHH" secondAttribute="centerY" multiplier="1.75" id="Gum-YU-Y4G"/>
+                            <constraint firstItem="2M1-JP-IR8" firstAttribute="top" secondItem="an2-To-IJS" secondAttribute="top" constant="20" id="KZA-8u-oVl"/>
+                            <constraint firstItem="2M1-JP-IR8" firstAttribute="leading" secondItem="an2-To-IJS" secondAttribute="leading" constant="20" id="d7R-fc-TmD"/>
+                            <constraint firstItem="an2-To-IJS" firstAttribute="trailing" secondItem="2M1-JP-IR8" secondAttribute="trailing" constant="20" id="kyA-Jo-hey"/>
+                            <constraint firstItem="vaz-RS-KQk" firstAttribute="top" secondItem="2M1-JP-IR8" secondAttribute="bottom" constant="20" id="r1E-nX-xhQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="an2-To-IJS"/>
                     </view>

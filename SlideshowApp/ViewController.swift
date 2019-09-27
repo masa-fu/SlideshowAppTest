@@ -15,14 +15,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var autoStart: UIButton!
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        self.timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+        if (timer_state == 1) {
+            self.timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
+            timer_state = 0
+        }
     }
     
     // 画像を押した時に呼び出し
     @IBAction func onTapImage(_ sender: Any) {
-        // タイマー停止
-        self.timer.invalidate()
-        self.timer = nil
+        // タイマーが起動している場合は、タイマー停止
+        if self.timer != nil {
+            self.timer.invalidate()
+            self.timer = nil
+            timer_state = 1
+        }
         // セグエを使用して画面を遷移
         self.performSegue(withIdentifier: "result", sender: nil)
     }
@@ -79,6 +85,9 @@ class ViewController: UIViewController {
             self.timer = nil
         }
     }
+    
+    // タイマーの状態
+    var timer_state = 0
     
     // 表示している画像の番号
     var pictureNo = 0
