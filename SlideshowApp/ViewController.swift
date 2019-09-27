@@ -15,10 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var autoStart: UIButton!
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        self.timer = Timer.scheduledTimer(timeInterval:1, target: self, selector: #selector(updateTimer(_:)), userInfo: nil, repeats: true)
     }
     
     // 画像を押した時に呼び出し
     @IBAction func onTapImage(_ sender: Any) {
+        // タイマー停止
+        self.timer.invalidate()
+        self.timer = nil
         // セグエを使用して画面を遷移
         self.performSegue(withIdentifier: "result", sender: nil)
     }
